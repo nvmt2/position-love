@@ -3,9 +3,8 @@ const baseUrlImg = './assets/';
 const imageNode = document.querySelector('.image-posture');
 const lengthArrayImage = 18;
 
-if (!('ondevicemotion' in window)) {
-  alert('Not Supported');
-}
+const draft = 'ondevicemotion' in window;
+alert(draft);
 
 const randomIntFromInterval = (min, max) => {
   // min and max included
