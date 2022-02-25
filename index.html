@@ -3,8 +3,15 @@
   <head>
     <title>LOVE</title>
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
       .main-page {
         margin: 15px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       .title {
         text-align: center;
@@ -17,18 +24,32 @@
       }
       .image-posture {
         /* height: 100%; */
+        width: 90vw;
+      }
+
+      .btn-random {
+        height: 80px;
         width: 100%;
+
+        font-size: 22px;
+        font-weight: bold;
+        background-color: rgb(226 226 255 / 90%);
+        color: gray;
+        border: none;
+        border-radius: 10px;
       }
     </style>
   </head>
   <body>
     <div class="main-page">
-      <h1 class="title">Change Positions</h1>
-      <button onclick="randomImage()">Change Positions</button>
+      <button class="btn-random" onclick="randomImage()">
+        Change Positions
+      </button>
       <div class="grid-image">
         <img class="image-posture" src="./assets/1.jpg" alt="posture" />
       </div>
     </div>
   </body>
+  <script src="shake.js"></script>
   <script src="./index.js"></script>
 </html>
